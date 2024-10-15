@@ -1,3 +1,22 @@
+//! A simple pager utility for displaying file contents or piped input.
+//!
+//! This program acts as a pager, similar to 'less' or 'more', but with some additional features:
+//! - It can read from a file specified as a command-line argument or from piped input (stdin).
+//! - It uses the `minus` crate for dynamic paging, allowing for smooth scrolling and search functionality.
+//! - The pager displays the filename (or "stdin" for piped input) as a prompt.
+//!
+//! Usage:
+//!     cortex <filename>
+//!     command | cortex
+//!
+//! The pager supports the following key bindings:
+//! - Arrow keys: Navigate up and down
+//! - Page Up/Down: Scroll by page
+//! - '/': Enter search mode
+//! - 'q': Quit the pager
+//!
+//! Note: This pager requires a terminal that supports ANSI escape codes for proper functionality.
+
 use anyhow::{Context, Result};
 use std::env::args;
 use std::fs::File;
