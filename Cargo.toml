@@ -8,5 +8,4 @@ minus = { git = "https://github.com/AMythicDev/minus", features = [
   "dynamic_output",
   "search",
 ] }
-anyhow = { version = "1.0.86", features = ["backtrace"] }
-atty = "0.2.14"
+anyhow = { version = "1.0.89", features = ["backtrace"] }
